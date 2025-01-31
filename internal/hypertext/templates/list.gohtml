@@ -1,0 +1,126 @@
+{{define "imports"}}
+	<script src="https://unpkg.com/htmx.org@2.0.4"
+	        crossorigin="anonymous"
+	        integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"></script>
+	<script src="https://unpkg.com/sortablejs@1.15.6/Sortable.min.js"
+	        crossorigin="anonymous"
+	        integrity='sha384-HZZ/fukV+9G8gwTNjN7zQDG0Sp7MsZy5DDN6VfY3Be7V9dvQpEpR2jF2HlyFUUjU'></script>
+{{end}}
+
+{{define "style"}}
+	<style>
+	  .error {
+		  color: darkred;
+	  }
+	</style>
+{{end}}
+
+{{define "GET / Lists(ctx)" -}}
+	<html lang='us-en'>
+	<head>
+		<title>List</title>
+      {{template "imports"}}
+      {{template "style"}}
+	</head>
+	<body>
+  {{template "nav"}}
+	<ul>
+      {{range .}}
+				<li>
+					<a href="/list/{{.ID}}">
+              {{.Name}}
+					</a>
+				</li>
+      {{end}}
+	</ul>
+	</body>
+	</html>
+{{end}}
+
+{{define "list-page" -}}
+	<html lang='us-en'>
+	<head>
+		<title>{{.List.Name}}</title>
+      {{template "imports"}}
+      {{template "style"}}
+		<script>
+        htmx.onLoad(function (content) {
+            var sortables = content.querySelectorAll(".sortable");
+            for (var i = 0; i < sortables.length; i++) {
+                var sortable = sortables[i];
+                var sortableInstance = new Sortable(sortable, {
+                    animation: 150,
+                    ghostClass: 'blue-background-class',
+
+                    // Disable sorting on the `end` event
+                    onEnd: function (evt) {
+                        this.option("disabled", true);
+                    }
+                });
+
+                // Re-enable sorting on the `htmx:afterSwap` event
+                sortable.addEventListener("htmx:afterSwap", function () {
+                    sortableInstance.option("disabled", false);
+                });
+            }
+        })
+		</script>
+	</head>
+	<body>
+  {{template "nav"}}
+	<form class="sortable" hx-post="/list/{{.List.ID}}" hx-trigger="end">
+      {{template "list-priority-form" .}}
+	</form>
+	</body>
+	</html>
+{{end -}}
+
+{{- define "nav" -}}
+	<nav>
+		<ul>
+			<li><a href='/'>Lists</a></li>
+		</ul>
+	</nav>
+{{end}}
+
+{{- define "error-page" -}}
+	<html lang='us-en'>
+	<head>
+		<title>Error</title>
+      {{template "imports"}}
+      {{template "style"}}
+	</head>
+	<body>
+  {{template "nav"}}
+	<h1>Error</h1>
+  {{- template "error-message" . -}}
+	</body>
+	</html>
+{{- end -}}
+
+{{define "error-message"}}
+	<p class='error'>{{.}}</p>
+{{end}}
+
+{{define "list-priority-form"}}
+    {{range .Tasks -}}
+			<div><input type='hidden' name='task-id' value='{{.ID}}'/>{{.Instructions}}</div>
+    {{end -}}
+{{end}}
+
+{{define "GET /list/{id} GetList(ctx, id)" -}}
+    {{- with .Err -}}
+        {{- template "error-page" . -}}
+    {{- else -}}
+        {{- template "list-page" .}}
+    {{- end -}}
+{{- end}}
+
+{{- define "POST /list/{id} UpdateList(ctx, id, form)" -}}
+    {{- with .Err -}}
+        {{- template "error-message" . -}}
+    {{- else -}}
+        {{- template "list-priority-form" .}}
+    {{- end -}}
+{{- end -}}
+
