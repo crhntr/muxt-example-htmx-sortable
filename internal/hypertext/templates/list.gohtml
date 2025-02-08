@@ -25,7 +25,7 @@
 	<body>
   {{template "nav"}}
 	<ul>
-      {{range .}}
+      {{range .Data}}
 				<li>
 					<a href="/list/{{.ID}}">
               {{.Name}}
@@ -99,7 +99,7 @@
 {{- end -}}
 
 {{define "error-message"}}
-	<p class='error'>{{.}}</p>
+	<p class='error'>{{.Error}}</p>
 {{end}}
 
 {{define "list-priority-form"}}
@@ -109,18 +109,18 @@
 {{end}}
 
 {{define "GET /list/{id} GetList(ctx, id)" -}}
-    {{- with .Err -}}
+    {{- with .Data.Err -}}
         {{- template "error-page" . -}}
     {{- else -}}
-        {{- template "list-page" .}}
+        {{- template "list-page" .Data }}
     {{- end -}}
 {{- end}}
 
 {{- define "POST /list/{id} UpdateList(ctx, id, form)" -}}
-    {{- with .Err -}}
+    {{- with .Data.Err -}}
         {{- template "error-message" . -}}
     {{- else -}}
-        {{- template "list-priority-form" .}}
+        {{- template "list-priority-form" .Data}}
     {{- end -}}
 {{- end -}}
 
