@@ -1,7 +1,7 @@
 package database
 
 //go:generate sqlc generate
-//go:generate go run ./internal/transactioner queries.sql
+//go:generate querier-interface queries.sql
 //go:generate rm -rf internal/fake
 //go:generate mkdir -p internal/fake
 //go:generate counterfeiter -generate
