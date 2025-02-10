@@ -5,7 +5,7 @@ import (
 
 	"github.com/jackc/pgx/v5"
 
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database/internal/transaction"
+	"github.com/crhntr/transaction"
 )
 
 type Caller interface {
@@ -16,7 +16,7 @@ type Transactions struct {
 	manager Caller
 }
 
-func NewTransactions(conn transaction.TxBeginner) *Transactions {
+func NewTransactions(conn transaction.Beginner) *Transactions {
 	return NewTransactionsWithCaller(transaction.NewManager(conn))
 }
 

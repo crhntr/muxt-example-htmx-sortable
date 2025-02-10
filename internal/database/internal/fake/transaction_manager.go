@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database/internal/transaction"
+	"github.com/crhntr/transaction"
 	pgx "github.com/jackc/pgx/v5"
 )
 

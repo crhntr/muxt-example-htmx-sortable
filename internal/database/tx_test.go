@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
+	"github.com/crhntr/transaction"
 	"github.com/jackc/pgx/v5"
 	"github.com/stretchr/testify/require"
 
 	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
 	"github.com/crhntr/muxt-example-htmx-sortable/internal/database/internal/fake"
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database/internal/transaction"
 )
 
 func TestTransactions_ReadOnly(t *testing.T) {
