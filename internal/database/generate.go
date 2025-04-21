@@ -4,7 +4,7 @@ package database
 //go:generate querier-interface queries.sql
 //go:generate rm -rf internal/fake
 //go:generate mkdir -p internal/fake
-//go:generate counterfeiter -generate
+//go:generate go run github.com/maxbrunsfeld/counterfeiter/v6 -generate
 
 //counterfeiter:generate -o internal/fake/tx.go --fake-name Tx github.com/jackc/pgx/v5.Tx
 //counterfeiter:generate -o internal/fake/transaction_manager.go --fake-name TransactionManager . Caller

@@ -25,7 +25,7 @@
 	<body>
   {{template "nav"}}
 	<ul>
-      {{range .Data}}
+      {{range $.Result}}
 				<li>
 					<a href="/list/{{.ID}}">
               {{.Name}}
@@ -40,7 +40,7 @@
 {{define "list-page" -}}
 	<html lang='us-en'>
 	<head>
-		<title>{{.List.Name}}</title>
+		<title>{{.Result.List.Name}}</title>
       {{template "imports"}}
       {{template "style"}}
 		<script>
@@ -68,7 +68,7 @@
 	</head>
 	<body>
   {{template "nav"}}
-	<form class="sortable" hx-post="/list/{{.List.ID}}" hx-trigger="end">
+	<form class="sortable" hx-post="/list/{{.Result.List.ID}}" hx-trigger="end">
       {{template "list-priority-form" .}}
 	</form>
 	</body>
@@ -103,24 +103,24 @@
 {{end}}
 
 {{define "list-priority-form"}}
-    {{range .Tasks -}}
+    {{range .Result.Tasks -}}
 			<div><input type='hidden' name='task-id' value='{{.ID}}'/>{{.Instructions}}</div>
     {{end -}}
 {{end}}
 
 {{define "GET /list/{id} GetList(ctx, id)" -}}
-    {{- with .Data.Err -}}
+    {{- with $.Result.Err -}}
         {{- template "error-page" . -}}
     {{- else -}}
-        {{- template "list-page" .Data }}
+        {{- template "list-page" . }}
     {{- end -}}
 {{- end}}
 
 {{- define "POST /list/{id} UpdateList(ctx, id, form)" -}}
-    {{- with .Data.Err -}}
+    {{- with $.Result.Err -}}
         {{- template "error-message" . -}}
     {{- else -}}
-        {{- template "list-priority-form" .Data}}
+        {{- template "list-priority-form" . }}
     {{- end -}}
 {{- end -}}
 
