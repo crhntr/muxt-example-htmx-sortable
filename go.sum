@@ -2,8 +2,8 @@ github.com/andybalholm/cascadia v1.3.3 h1:AG2YHrzJIm4BZ19iwJ/DAua6Btl3IwJX+VI4kk
 github.com/andybalholm/cascadia v1.3.3/go.mod h1:xNd9bqTn98Ln4DwST8/nG+H0yuB8Hmgu1YHNnWw0GeA=
 github.com/crhntr/dom v0.3.2 h1:rvam4zx3jVYC3J9GTKmLPTjljuOAZorcUa8wfZpnpdw=
 github.com/crhntr/dom v0.3.2/go.mod h1:WgCQZ7wMllTxowm4HE8eWJtSnMWQPWI6EYQWOioP+og=
-github.com/crhntr/muxt v0.14.1 h1:SP7kmLmEWc/uZBrLjd1rMknntC8sb8YL3up4b4AWKmM=
-github.com/crhntr/muxt v0.14.1/go.mod h1:/iLwApwWY4CDx1a8nfoAh47K082yFjD1OTKyvMbFIcM=
+github.com/crhntr/muxt v0.14.2 h1:a+SXZ7omGiJcv5EgRXnbGSVnrZVGaE+IJAHqnz57uWE=
+github.com/crhntr/muxt v0.14.2/go.mod h1:/iLwApwWY4CDx1a8nfoAh47K082yFjD1OTKyvMbFIcM=
 github.com/crhntr/transaction v0.0.1 h1:0hsuGvJXUKoSl4+L00WJMWL/r1t4pkUZs3ZtM2DtduE=
 github.com/crhntr/transaction v0.0.1/go.mod h1:zpzGjIhH+r/GXdlHoYjHZXqkKEcVnO8fCnFOYcdvIh8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

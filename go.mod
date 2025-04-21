@@ -14,7 +14,7 @@ require (
 require (
 	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/crhntr/dom v0.3.2 // indirect
-	github.com/crhntr/muxt v0.14.1 // indirect
+	github.com/crhntr/muxt v0.14.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/ettle/strcase v0.2.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
