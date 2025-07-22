@@ -165,10 +165,6 @@ func (fake *TransactionManager) UpdatePriorityListReturnsOnCall(i int, result1 e
 func (fake *TransactionManager) Invocations() map[string][][]interface{} {
 	fake.invocationsMutex.RLock()
 	defer fake.invocationsMutex.RUnlock()
-	fake.readOnlyMutex.RLock()
-	defer fake.readOnlyMutex.RUnlock()
-	fake.updatePriorityListMutex.RLock()
-	defer fake.updatePriorityListMutex.RUnlock()
 	copiedInvocations := map[string][][]interface{}{}
 	for key, value := range fake.invocations {
 		copiedInvocations[key] = value

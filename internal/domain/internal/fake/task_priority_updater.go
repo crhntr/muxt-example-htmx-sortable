@@ -169,10 +169,6 @@ func (fake *TaskPriorityUpdater) SetTaskPriorityReturnsOnCall(i int, result1 err
 func (fake *TaskPriorityUpdater) Invocations() map[string][][]interface{} {
 	fake.invocationsMutex.RLock()
 	defer fake.invocationsMutex.RUnlock()
-	fake.listByIDMutex.RLock()
-	defer fake.listByIDMutex.RUnlock()
-	fake.setTaskPriorityMutex.RLock()
-	defer fake.setTaskPriorityMutex.RUnlock()
 	copiedInvocations := map[string][][]interface{}{}
 	for key, value := range fake.invocations {
 		copiedInvocations[key] = value

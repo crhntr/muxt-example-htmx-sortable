@@ -239,12 +239,6 @@ func (fake *RoutesReceiver) UpdateListReturnsOnCall(i int, result1 hypertext.Lis
 func (fake *RoutesReceiver) Invocations() map[string][][]interface{} {
 	fake.invocationsMutex.RLock()
 	defer fake.invocationsMutex.RUnlock()
-	fake.getListMutex.RLock()
-	defer fake.getListMutex.RUnlock()
-	fake.listsMutex.RLock()
-	defer fake.listsMutex.RUnlock()
-	fake.updateListMutex.RLock()
-	defer fake.updateListMutex.RUnlock()
 	copiedInvocations := map[string][][]interface{}{}
 	for key, value := range fake.invocations {
 		copiedInvocations[key] = value

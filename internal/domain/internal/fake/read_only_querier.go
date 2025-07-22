@@ -251,12 +251,6 @@ func (fake *ReadOnlyQuerier) TasksByListIDReturnsOnCall(i int, result1 []databas
 func (fake *ReadOnlyQuerier) Invocations() map[string][][]interface{} {
 	fake.invocationsMutex.RLock()
 	defer fake.invocationsMutex.RUnlock()
-	fake.listByIDMutex.RLock()
-	defer fake.listByIDMutex.RUnlock()
-	fake.listsMutex.RLock()
-	defer fake.listsMutex.RUnlock()
-	fake.tasksByListIDMutex.RLock()
-	defer fake.tasksByListIDMutex.RUnlock()
 	copiedInvocations := map[string][][]interface{}{}
 	for key, value := range fake.invocations {
 		copiedInvocations[key] = value
