@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/crhntr/transaction v0.0.1
 	github.com/jackc/pgx/v5 v5.7.6
-	github.com/pressly/goose/v3 v3.24.3
+	github.com/pressly/goose/v3 v3.25.0
 	github.com/stretchr/testify v1.11.1
 )
 
