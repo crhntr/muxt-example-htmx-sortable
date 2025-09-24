@@ -1,7 +1,5 @@
 github.com/andybalholm/cascadia v1.3.3 h1:AG2YHrzJIm4BZ19iwJ/DAua6Btl3IwJX+VI4kktS1LM=
 github.com/andybalholm/cascadia v1.3.3/go.mod h1:xNd9bqTn98Ln4DwST8/nG+H0yuB8Hmgu1YHNnWw0GeA=
-github.com/crhntr/dom v0.5.4 h1:eXKB1E6pjdwi7W1zj/Vkr+AAD00tuvkUBJAtkyGdjTs=
-github.com/crhntr/dom v0.5.4/go.mod h1:8+qaWA/FxLEN5ogqrIgB+ibM/bCCZLJfDCwfbuocoUU=
 github.com/crhntr/transaction v0.0.1 h1:0hsuGvJXUKoSl4+L00WJMWL/r1t4pkUZs3ZtM2DtduE=
 github.com/crhntr/transaction v0.0.1/go.mod h1:zpzGjIhH+r/GXdlHoYjHZXqkKEcVnO8fCnFOYcdvIh8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -55,10 +53,12 @@ github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UV
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
 github.com/stretchr/testify v1.11.1/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD981Nm4B6U=
-github.com/typelate/check v0.0.1 h1:TrU4ClpzOsPWAUZKVvocFuJb7EWqIxIeqg95HsTFBx0=
-github.com/typelate/check v0.0.1/go.mod h1:KBYiewZ54EGYiSc22NQWQS5s1L0CjEAx/e7f4o0AgK0=
-github.com/typelate/muxt v0.17.3 h1:plOAcKWaAtZINsrNtvWSnXzDrgfpi9+jZgEHCDgR3pk=
-github.com/typelate/muxt v0.17.3/go.mod h1:YNbZO/cFp+ejtBFkLiq8DAWTeF5ybVmszf090GNzu6Q=
+github.com/typelate/check v0.0.3 h1:XYcSlSayloHSSTGI3+ipXYfPAgzouTlTDXAFGO/TkWM=
+github.com/typelate/check v0.0.3/go.mod h1:KBYiewZ54EGYiSc22NQWQS5s1L0CjEAx/e7f4o0AgK0=
+github.com/typelate/dom v0.6.1 h1:pmVEGebzxvruvPODynPgDWVjUy/HufSHM7wtqtFABMA=
+github.com/typelate/dom v0.6.1/go.mod h1:M8ReAjpQ82KoBT+aNaJOBLb9BOGUN96LzRCAitHiHQ8=
+github.com/typelate/muxt v0.17.4 h1:F8szkXEsz08BTXqhygMl0A17X27ZgSahm5sA7uaxqoc=
+github.com/typelate/muxt v0.17.4/go.mod h1:Nqi+Vsn5kkMEqEeLvE/VpDerHqNBNA4dC9pcZ3VSOfk=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
 go.uber.org/multierr v1.11.0/go.mod h1:20+QtiLqy0Nd6FdQB9TLXag12DsQkrbs3htMFfDN80Y=

@@ -11,7 +11,6 @@ require (
 
 require (
 	github.com/andybalholm/cascadia v1.3.3 // indirect
-	github.com/crhntr/dom v0.5.4 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/ettle/strcase v0.2.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
@@ -21,8 +20,9 @@ require (
 	github.com/mfridman/interpolate v0.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sethvargo/go-retry v0.3.0 // indirect
-	github.com/typelate/check v0.0.1 // indirect
-	github.com/typelate/muxt v0.17.3 // indirect
+	github.com/typelate/check v0.0.3 // indirect
+	github.com/typelate/dom v0.6.1 // indirect
+	github.com/typelate/muxt v0.17.4 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/crypto v0.42.0 // indirect
 	golang.org/x/mod v0.28.0 // indirect
