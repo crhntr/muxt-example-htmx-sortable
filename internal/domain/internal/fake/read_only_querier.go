@@ -5,7 +5,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
+	"github.com/typelate/example-sortable/internal/database"
 )
 
 type ReadOnlyQuerier struct {

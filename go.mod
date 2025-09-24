@@ -1,4 +1,4 @@
-module github.com/crhntr/muxt-example-htmx-sortable
+module github.com/typelate/example-sortable
 
 go 1.25.0
 

@@ -34,7 +34,7 @@ import (
 	"path"
 	"strconv"
 
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
+	"github.com/typelate/example-sortable/internal/database"
 )
 
 type RoutesReceiver interface {

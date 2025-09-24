@@ -9,9 +9,9 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/domain"
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/hypertext"
+	"github.com/typelate/example-sortable/internal/database"
+	"github.com/typelate/example-sortable/internal/domain"
+	"github.com/typelate/example-sortable/internal/hypertext"
 )
 
 func main() {

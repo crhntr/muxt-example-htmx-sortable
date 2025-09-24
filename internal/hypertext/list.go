@@ -1,6 +1,6 @@
 package hypertext
 
-import "github.com/crhntr/muxt-example-htmx-sortable/internal/database"
+import "github.com/typelate/example-sortable/internal/database"
 
 type ListData struct {
 	Err   error

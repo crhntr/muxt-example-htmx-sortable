@@ -4,7 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
+	"github.com/typelate/example-sortable/internal/database"
 )
 
 type (

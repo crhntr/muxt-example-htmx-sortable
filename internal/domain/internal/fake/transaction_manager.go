@@ -5,8 +5,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/database"
-	"github.com/crhntr/muxt-example-htmx-sortable/internal/domain"
+	"github.com/typelate/example-sortable/internal/database"
+	"github.com/typelate/example-sortable/internal/domain"
 )
 
 type TransactionManager struct {
