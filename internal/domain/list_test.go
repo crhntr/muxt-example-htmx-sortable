@@ -26,7 +26,7 @@ func TestService_UpdateList(t *testing.T) {
 			return f(qr)
 		})
 		svc := domain.New(discard(), tx)
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		result := svc.UpdateList(ctx, 32, hypertext.UpdateListForm{
 			TaskIDs: []int32{1, 2, 3, 4},
@@ -54,7 +54,7 @@ func TestService_UpdateList(t *testing.T) {
 			return f(qr)
 		})
 		svc := domain.New(discard(), tx)
-		ctx := context.TODO()
+		ctx := t.Context()
 		qr.ListByIDReturns(database.List{}, errors.New("banana"))
 
 		result := svc.UpdateList(ctx, 32, hypertext.UpdateListForm{
@@ -70,7 +70,7 @@ func TestService_UpdateList(t *testing.T) {
 		tx.UpdatePriorityListCalls(func(ctx context.Context, f database.TaskPriorityUpdateFunc) error { return f(qr) })
 		tx.ReadOnlyCalls(func(ctx context.Context, f database.ReadOnlyFunc) error { return f(roQuerier) })
 		svc := domain.New(discard(), tx)
-		ctx := context.TODO()
+		ctx := t.Context()
 		qr.ListByIDReturns(database.List{
 			ID:   1,
 			Name: "peach",
@@ -104,7 +104,7 @@ func TestService_UpdateList(t *testing.T) {
 		tx.UpdatePriorityListCalls(func(ctx context.Context, f database.TaskPriorityUpdateFunc) error { return f(qr) })
 		tx.ReadOnlyCalls(func(ctx context.Context, f database.ReadOnlyFunc) error { return f(roQuerier) })
 		svc := domain.New(discard(), tx)
-		ctx := context.TODO()
+		ctx := t.Context()
 		qr.ListByIDReturns(database.List{
 			ID:   1,
 			Name: "peach",
@@ -139,7 +139,7 @@ func TestService_Lists(t *testing.T) {
 			return f(qr)
 		})
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.Lists(ctx)
 
@@ -155,7 +155,7 @@ func TestService_Lists(t *testing.T) {
 
 		svc := domain.New(discard(), tx)
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.Lists(ctx)
 
@@ -177,7 +177,7 @@ func TestService_GetList(t *testing.T) {
 
 		svc := domain.New(discard(), tx)
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.GetList(ctx, 42)
 
@@ -206,7 +206,7 @@ func TestService_GetList(t *testing.T) {
 
 		svc := domain.New(discard(), tx)
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.GetList(ctx, 42)
 
@@ -227,7 +227,7 @@ func TestService_GetList(t *testing.T) {
 
 		svc := domain.New(discard(), tx)
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.GetList(ctx, 42)
 
@@ -247,7 +247,7 @@ func TestService_GetList(t *testing.T) {
 
 		svc := domain.New(discard(), tx)
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.GetList(ctx, 42)
 
@@ -268,7 +268,7 @@ func TestService_GetList(t *testing.T) {
 
 		svc := domain.New(discard(), tx)
 
-		ctx := context.TODO()
+		ctx := t.Context()
 
 		data := svc.GetList(ctx, 42)
 
