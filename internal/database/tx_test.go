@@ -8,8 +8,8 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/stretchr/testify/require"
 
-	"github.com/typelate/example-sortable/internal/database"
-	"github.com/typelate/example-sortable/internal/database/internal/fake"
+	"github.com/typelate/sortable-example/internal/database"
+	"github.com/typelate/sortable-example/internal/database/internal/fake"
 )
 
 func TestTransactions_ReadOnly(t *testing.T) {

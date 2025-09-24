@@ -4,7 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/typelate/example-sortable/internal/database"
+	"github.com/typelate/sortable-example/internal/database"
 )
 
 type (

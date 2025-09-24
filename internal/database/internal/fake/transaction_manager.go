@@ -5,9 +5,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/typelate/example-sortable/internal/database"
 	"github.com/crhntr/transaction"
 	pgx "github.com/jackc/pgx/v5"
+	"github.com/typelate/sortable-example/internal/database"
 )
 
 type TransactionManager struct {

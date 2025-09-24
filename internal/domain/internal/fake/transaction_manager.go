@@ -5,8 +5,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/typelate/example-sortable/internal/database"
-	"github.com/typelate/example-sortable/internal/domain"
+	"github.com/typelate/sortable-example/internal/database"
+	"github.com/typelate/sortable-example/internal/domain"
 )
 
 type TransactionManager struct {

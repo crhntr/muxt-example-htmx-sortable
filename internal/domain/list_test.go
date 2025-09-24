@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/typelate/example-sortable/internal/database"
-	"github.com/typelate/example-sortable/internal/domain"
-	"github.com/typelate/example-sortable/internal/domain/internal/fake"
-	"github.com/typelate/example-sortable/internal/hypertext"
+	"github.com/typelate/sortable-example/internal/database"
+	"github.com/typelate/sortable-example/internal/domain"
+	"github.com/typelate/sortable-example/internal/domain/internal/fake"
+	"github.com/typelate/sortable-example/internal/hypertext"
 )
 
 func TestService_UpdateList(t *testing.T) {

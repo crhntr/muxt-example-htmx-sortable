@@ -9,9 +9,9 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/typelate/example-sortable/internal/database"
-	"github.com/typelate/example-sortable/internal/domain"
-	"github.com/typelate/example-sortable/internal/hypertext"
+	"github.com/typelate/sortable-example/internal/database"
+	"github.com/typelate/sortable-example/internal/domain"
+	"github.com/typelate/sortable-example/internal/hypertext"
 )
 
 func main() {

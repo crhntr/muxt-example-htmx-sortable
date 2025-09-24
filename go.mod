@@ -1,4 +1,4 @@
-module github.com/typelate/example-sortable
+module github.com/typelate/sortable-example
 
 go 1.25.0
 

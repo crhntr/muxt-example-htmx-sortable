@@ -7,8 +7,8 @@ import (
 
 	"github.com/jackc/pgx/v5"
 
-	"github.com/typelate/example-sortable/internal/database"
-	"github.com/typelate/example-sortable/internal/hypertext"
+	"github.com/typelate/sortable-example/internal/database"
+	"github.com/typelate/sortable-example/internal/hypertext"
 )
 
 func (svc *Service) Lists(ctx context.Context) []database.List {

@@ -1,6 +1,6 @@
 package hypertext
 
-import "github.com/typelate/example-sortable/internal/database"
+import "github.com/typelate/sortable-example/internal/database"
 
 type ListData struct {
 	Err   error
